@@ -75,6 +75,31 @@ kernel rewrite, Jul-2026 llama.cpp bump) loads the published GGUF but outputs ga
 `--override-kv tokenizer.ggml.pre=str:llama-bpe` because the GGUF lacks pre-tokenizer metadata
 (LLaMA-3 tokenizer); that raised the sample eval from 9/12 to 10/12.
 
+## Releases → GHCR
+
+Publishing a GitHub release runs `.github/workflows/release.yml`. It builds linux/amd64 and
+linux/arm64 on native runners and pushes one multi-arch image to
+`ghcr.io/khuongntrd/leadguard`:
+
+| Release tag | Image tags |
+|---|---|
+| `v1.2.3` | `1.2.3`, `1.2`, `1`, `latest` |
+| `v0.4.0` | `0.4.0`, `0.4`, `latest` (no `0` major tag while in 0.x) |
+| `v1.3.0-rc.1` (pre-release) | `1.3.0-rc.1` only |
+
+Tags that are not `vX.Y.Z[-pre]` fail the run before building.
+
+```bash
+gh release create v0.1.0 --generate-notes          # stable
+gh release create v0.2.0-rc.1 --prerelease         # pre-release
+docker run -d -p 8000:8000 --cpus 4 --memory 2g ghcr.io/khuongntrd/leadguard:0.1.0
+```
+
+The first build takes ~20–30 min per arch (bitnet.cpp compile + 1.2 GB model). Later builds
+reuse the GitHub Actions layer cache. GHCR packages start **private** even for a public repo,
+so after the first release set the package to public under
+*Package settings → Change visibility* so `docker pull` works without logging in.
+
 ## Accuracy (2026-11-07)
 
 The CSV `Stage` labels are not usable as ground truth: the "not Spam" side is mostly untriaged
