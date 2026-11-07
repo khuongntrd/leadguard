@@ -1,0 +1,8 @@
+vendor/
+models/
+.venv/
+__pycache__/
+setup.log
+eval-results.jsonl
+data/
+*.log

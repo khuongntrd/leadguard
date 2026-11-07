@@ -1,0 +1,12 @@
+{"expected": "spam", "message": "Your Account: New Funds Transfer Confirmation http://secure-verify-account.example.com/login"}
+{"expected": "spam", "message": "Hi there, my name is Mike from an SEO agency. We can get your website to page 1 of Google in 7 days, guaranteed. Reply for a free audit!"}
+{"expected": "spam", "message": "Congratulations! You have won a $1,000 gift card. Click here to claim within 24 hours."}
+{"expected": "spam", "message": "Chúc mừng quý khách đã trúng thưởng iPhone 17. Vui lòng chuyển 500.000đ phí vận chuyển để nhận quà."}
+{"expected": "spam", "message": "Vay tiền nhanh không cần thế chấp, giải ngân trong 15 phút, lãi suất 0%. Liên hệ Zalo ngay!"}
+{"expected": "spam", "message": "Earn 35% commission for life. Register your affiliate links in 5 minutes, no experience needed."}
+{"expected": "valid_language", "message": "Tôi có nhu cầu mua căn hộ 2 phòng ngủ, cho tôi xin bảng giá và chính sách thanh toán."}
+{"expected": "valid_language", "message": "Dự án này bao giờ bàn giao vậy anh? Có hỗ trợ vay ngân hàng không?"}
+{"expected": "valid_language", "message": "Hi, I'm interested in the 3-bedroom unit. Is it still available and can I schedule a viewing this weekend?"}
+{"expected": "valid_language", "message": "cho e hỏi căn góc còn ko ạ, gọi lại giúp e sau 5h chiều nhé"}
+{"expected": "valid_language", "message": "I can't log in to my agent console, the page keeps redirecting. Can someone help?"}
+{"expected": "valid_language", "message": "Giá thuê mặt bằng tầng trệt bao nhiêu một tháng?"}
